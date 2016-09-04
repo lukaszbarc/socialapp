@@ -3,7 +3,6 @@ angular.module('app')
         $scope.addPost = function () {
             if ($scope.postBody) {
                 PostsSvc.create({
-                    username: 'newUser',
                     body: $scope.postBody
                 }).success(function (post) {
                     $scope.posts.unshift(post);
